@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>KienTran</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            const add = (a, b) => (
+                new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        if (typeof a !== 'number' || typeof b !== 'number') {
+                            return reject(new Error('Tham so phai co kieu number'));
+                        }
+                        resolve(a + b);
+                    }, 3000);
+                })
+            );
+            const a = add(4,'5')
+            .then(t => console.log(t));
+            console.log(a);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

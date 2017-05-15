@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+  </head>
+  <body>
+    <form action="/result" method="post">
+      <input type="text" name="soA" placeholder="So a"/>
+      <input type="text" name="pheptinh" placeholder="Phep tinh">
+        <input type="text" name="soB" placeholder="So b">
+      <input type="submit" value="Tinh">
+    </form><br/>
+    <ul>
+      <% for(var i = 0; i < mang.length; i++){ %>
+        <li> <%=mang[i]%> </li>
+      <% } %>
+      <% mang.forEach(e =>{%>
+        <li> <%-e%> </li>
+      <%});%>
+    </ul>
+    <% if(isAdmin){%>
+      <a href="#">Quang Tri</a>
+    <%}else{%>
+      <a href="#">Khong phai quang tri</a>
+    <%}%>
+    <img src="1.png" alt="">
+  </body>
+</html>
